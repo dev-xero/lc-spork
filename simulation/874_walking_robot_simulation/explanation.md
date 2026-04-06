@@ -1,15 +1,15 @@
-## lc 874 - walking robot simulation
+# lc 874 - walking robot simulation
 
 here i attempt to explain my approach to solving lc problem 874.
 
-### solution details
+## solution details
 
 - problem: https://leetcode.com/problems/walking-robot-simulation
 - language: cpp
 - difficulty: medium
 - solved: yes
 
-### let's understand the problem
+## let's understand the problem
 
 going through the problem statement, there are a few key words that stand out. firstly, we know there are two classes of commands, namely (i) rotation and (ii) movement commands.
 
@@ -25,7 +25,7 @@ finally, it is possible for an obstacle to exist in the origin (0, 0), in which 
 
 the problem asks us to return the largest euclidean distance traveled by the robot, this just means to calculate the sum of the square of the largest valid x and y coordinates.
 
-### approach
+## approach
 
 my approach is fairly straight forward, we'll simulate the robot's movement in this 2D space. we'll start by determining the class of command to execute (rotation/movement). for rotation commands, we must update the direction state accordingly (0, 1, 2, 3) for N, E, S, W respectively. for movement commands, we will simulate moving in the current direction until we encounter an obstacle.
 
@@ -41,7 +41,7 @@ i outline this process below:
 - otherwise, update the x and y state coordinates.
 - compute the euclidean distance, then compare it against the largest distance seen so far.
 
-### conclusion
+## conclusion
 
 i try to stay language agnostic as much as possible, these steps should be easily reproducible in python, java or a similar programming language. you may find my c++ implementation attached.
 
